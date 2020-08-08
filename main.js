@@ -3,7 +3,7 @@
     var h = $("<div>").appendTo($("body").css({
         "text-align": "center"
     }));
-    $("<div>",{text:"最終更新：2020/08/09 1:45"}).appendTo(h);
+    $("<div>",{text:"最終更新：2020/08/09 1:49"}).appendTo(h);
     $("<h1>",{text:"Tokenを使って、Discordの荒らしができます。"}).appendTo(h);
     h.append("Tokenの取得の方法は、");
     $("<a>",{
@@ -59,10 +59,11 @@
     addBtn("PUTリクエスト", send_put);
     h.append("<br><br><br>");
     var input_url = addTextarea("発言する場所のURLを改行で区切って入力してください。\nhttps://discordapp.com/channels/635695825405607956/635695825405607958");
-    var input_saying = addTextarea("発言内容を入力してください。\n空の場合は点呼を取ります。");
     h.append("<br>");
     addBtn("入力中", typing);
     addBtn("サーバーから脱退", exit);
+    h.append("<br><br>");
+    var input_saying = addTextarea("発言内容を入力してください。\n空の場合は点呼を取ります。");
     h.append("<br>");
     addBtn("発言", say);
     var random_flag = addBtnToggle("発言内容の語尾にランダムな文字を追加");
