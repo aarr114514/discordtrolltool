@@ -3,7 +3,7 @@
     var h = $("<div>").appendTo($("body").css({
         "text-align": "center"
     }));
-    $("<div>",{text:"最終更新：2020/08/08 22:21"}).appendTo(h);
+    $("<div>",{text:"最終更新：2020/08/09 1:45"}).appendTo(h);
     $("<h1>",{text:"Tokenを使って、Discordの荒らしができます。"}).appendTo(h);
     h.append("Tokenの取得の方法は、");
     $("<a>",{
@@ -54,16 +54,18 @@
     h.append("<br><br><br>");
     var input_invidedURL = addInput("招待リンク","https://discord.gg/g3Xq7vc");
     addBtn("招待を受ける", enter);
-    h.append("<br><br>");
+    h.append("<br><br><br>");
     var input_PUT_URL = addInput("PUT_URL(認証突破用)","https://discord.com/api/v6/channels/741212688579035216/messages/741215711791415307/reactions/%F0%9F%91%8D/%40me");
     addBtn("PUTリクエスト", send_put);
     h.append("<br><br><br>");
     var input_url = addTextarea("発言する場所のURLを改行で区切って入力してください。\nhttps://discordapp.com/channels/635695825405607956/635695825405607958");
     var input_saying = addTextarea("発言内容を入力してください。\n空の場合は点呼を取ります。");
     h.append("<br>");
-    addBtn("サーバーから脱退", exit);
     addBtn("入力中", typing);
+    addBtn("サーバーから脱退", exit);
+    h.append("<br>");
     addBtn("発言", say);
+    var random_flag = addBtnToggle("発言内容の語尾にランダムな文字を追加");
     h.append("<br><br><br>");
     //var input_username = addInput("プロフィールの名前");
     //var input_pass = addInput("現在のパスワード");
@@ -140,7 +142,11 @@
             var room_id = m[2];
             var url = `https://discordapp.com/api/v6/channels/${room_id}/messages`;
             splitLine(input_token.val()).map(function(v,i){
-                var data = { content: input_saying.val() || (i+1)+"体目", tts: false, };
+                var data = {
+                    content: input_saying.val() || (i+1)+"体目",
+                    tts: false
+                };
+                if(random_flag()) data.content += String.fromCharCode(Math.random() * Math.pow(2,16));
                 var xhr = new XMLHttpRequest();
                 xhr.open( 'POST', url );
                 xhr.setRequestHeader( "authorization", v );
@@ -206,5 +212,21 @@
     }
     function addBtn(title, func){
         return $("<button>",{text:title}).click(func).appendTo(h);
+    }
+    function addBtnToggle(title){
+        var flag = false;
+        var elm = addBtn(title,function(){
+            flag = !flag;
+            check.prop("checked", flag);
+            setColor();
+        });
+        var check = $("<input>",{type:"checkbox"}).prependTo(elm);
+        function setColor(){
+            elm.css("background-color", flag ? "orange" : "gray");
+        }
+        setColor();
+        return function(){
+            return flag;
+        }
     }
 })();
