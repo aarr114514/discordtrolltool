@@ -1,1 +1,195 @@
-var _0x3f4d=['join','result','/typing','<input>','send','を参照してください。<br><br>','appendTo','DELETE','content-type','setRequestHeader','https://discordapp.com/api/v6/invites/','filter','val','body','click','keyup','input','<textarea>','3em','<a>','[秒]','indexOf','こちら','プロフィールの更新','/messages','type','発言する場所のURLを改行で区切って入力してください。\x0ahttps://discordapp.com/channels/635695825405607956/635695825405607958','addEventListener','<h1>','発言内容を入力してください。\x0a空の場合は点呼を取ります。','append','stringify','split','application/json','authorization','設定するアバター画像を選択してください。','https://discordapp.com/api/v6/users/@me/guilds/','アバターを設定してください。','<br>','length','empty','height','リクエスト送信間隔','招待リンクを設定してください。','<div>','css','Tokenを改行で区切って入力してください。','<button>','Tokenの取得の方法は、','open','createElement','Tokenを使って、Discordの荒らしができます。','<img>','number','入力中','POST','https://discordapp.com/api/v6/users/@me','map','招待リンク','プロフィールの名前','<br><br><br>','readAsDataURL','現在のパスワード','test','https://shunshun94.github.io/shared/sample/discordAccountToken','attr','https://discordapp.com/api/v6/channels/','change','https://discord.gg/g3Xq7vc','match','招待を受ける'];(function(_0x3533e8,_0x3f4d61){var _0x5a9dfa=function(_0x1c7a64){while(--_0x1c7a64){_0x3533e8['push'](_0x3533e8['shift']());}};_0x5a9dfa(++_0x3f4d61);}(_0x3f4d,0x143));var _0x5a9d=function(_0x3533e8,_0x3f4d61){_0x3533e8=_0x3533e8-0x0;var _0x5a9dfa=_0x3f4d[_0x3533e8];return _0x5a9dfa;};(function(){'use strict';var _0x2ba367=$(_0x5a9d('0x5'))[_0x5a9d('0x26')]($(_0x5a9d('0x2d'))[_0x5a9d('0x6')]({'text-align':'center'}));$(_0x5a9d('0x5'),{'text':'最終更新：2020/07/24\x2020:00'})[_0x5a9d('0x26')](_0x2ba367),$(_0x5a9d('0x3c'),{'text':_0x5a9d('0xc')})[_0x5a9d('0x26')](_0x2ba367),_0x2ba367[_0x5a9d('0x3e')](_0x5a9d('0x9')),$(_0x5a9d('0x33'),{'text':_0x5a9d('0x36'),'href':_0x5a9d('0x19'),'target':'_blank'})[_0x5a9d('0x26')](_0x2ba367),_0x2ba367[_0x5a9d('0x3e')](_0x5a9d('0x25'));function _0xdccd20(_0x1857b1){function _0x4b507c(){var _0xcbf954=_0x6b46c1[_0x5a9d('0x2c')]();_0x6b46c1[_0x5a9d('0x2')](_0xcbf954[_0x5a9d('0x40')]('\x0a')[_0x5a9d('0x0')]+0x2+'em');}var _0x6b46c1=$(_0x5a9d('0x31'),{'placeholder':_0x1857b1})[_0x5a9d('0x26')](_0x2ba367)[_0x5a9d('0x2f')](_0x4b507c)[_0x5a9d('0x2e')](_0x4b507c)[_0x5a9d('0x6')]({'width':'70%','height':_0x5a9d('0x32')});return _0x6b46c1;}function _0x214dd8(_0x30b648){return _0x30b648[_0x5a9d('0x40')]('\x0a')[_0x5a9d('0x2b')](function(_0x5f555b){return _0x5f555b;});}var _0x25eada=_0xdccd20(_0x5a9d('0x7'))[_0x5a9d('0x1c')](function(){var _0xa4d6=[];_0x25eada[_0x5a9d('0x2c')](_0x214dd8($(this)[_0x5a9d('0x2c')]())['filter'](function(_0xd81714){if(/[^0-9a-zA-Z\.\-_]/[_0x5a9d('0x18')](_0xd81714))return![];if(_0xd81714[_0x5a9d('0x0')]!==0x3b)return![];if(_0xa4d6[_0x5a9d('0x35')](_0xd81714)!==-0x1)return![];return _0xa4d6['push'](_0xd81714),!![];})[_0x5a9d('0x20')]('\x0a'));}),_0x573e73=_0x3d898d(_0x5a9d('0x3'),_0x5a9d('0x34'))[_0x5a9d('0x1a')]({'type':_0x5a9d('0xe'),'value':0x1,'max':0x5,'min':0x0,'step':0.1});function _0x57b5d8(_0x40346a,_0x5b8fae=0x0,_0x552a2f=0x0){var _0x223267=Number(_0x573e73[_0x5a9d('0x2c')]());return(_0x40346a+_0x5b8fae*_0x552a2f)*_0x223267*0x3e8;}_0x2ba367['append'](_0x5a9d('0x15'));var _0x33bc30=_0x3d898d(_0x5a9d('0x13'),_0x5a9d('0x1d'));_0x4f8e54(_0x5a9d('0x1f'),_0x1b9c7c),_0x2ba367['append']('<br><br><br>');var _0x2f38c1=_0xdccd20(_0x5a9d('0x3a')),_0x2bc99a=_0xdccd20(_0x5a9d('0x3d'));_0x2ba367['append'](_0x5a9d('0x46')),_0x4f8e54('サーバーから脱退',_0x33732f),_0x4f8e54(_0x5a9d('0xf'),_0x59e511),_0x4f8e54('発言',_0x1e0321),_0x2ba367[_0x5a9d('0x3e')](_0x5a9d('0x15'));var _0x56057c=_0x3d898d(_0x5a9d('0x14')),_0x9af5da=_0x3d898d(_0x5a9d('0x17'));_0x4f8e54('アバターの設定',_0x4f0216);var _0x360a4c=$('<div>')['appendTo'](_0x2ba367);_0x4f8e54(_0x5a9d('0x37'),_0x527d38);function _0x1b9c7c(){var _0x1a2e0b=_0x33bc30['val']()[_0x5a9d('0x1e')](/\/([a-zA-Z0-9]+)\/?$/);if(!_0x1a2e0b)return alert(_0x5a9d('0x4'));var _0x1c0084=_0x5a9d('0x2a')+_0x1a2e0b[0x1];_0x214dd8(_0x25eada[_0x5a9d('0x2c')]())['map'](function(_0x3a6e3e,_0x3a5a3f){var _0xbca7ad=new XMLHttpRequest();_0xbca7ad[_0x5a9d('0xa')](_0x5a9d('0x10'),_0x1c0084),_0xbca7ad[_0x5a9d('0x29')](_0x5a9d('0x42'),_0x3a6e3e),_0xbca7ad[_0x5a9d('0x29')](_0x5a9d('0x28'),_0x5a9d('0x41')),setTimeout(function(){_0xbca7ad[_0x5a9d('0x24')]();},_0x57b5d8(_0x3a5a3f));});}function _0x33732f(){_0x214dd8(_0x2f38c1['val']())[_0x5a9d('0x12')](function(_0x264cdb,_0x2d6e3c,_0x76f50d){var _0x168d02=_0x264cdb[_0x5a9d('0x1e')](/([0-9]+)\/([0-9]+)/);if(!_0x168d02)return;var _0x564c10=_0x5a9d('0x44')+_0x168d02[0x1];_0x214dd8(_0x25eada[_0x5a9d('0x2c')]())[_0x5a9d('0x12')](function(_0x3ea512,_0x17c842){var _0x3137e5=new XMLHttpRequest();_0x3137e5[_0x5a9d('0xa')](_0x5a9d('0x27'),_0x564c10),_0x3137e5['setRequestHeader'](_0x5a9d('0x42'),_0x3ea512),setTimeout(function(){_0x3137e5[_0x5a9d('0x24')]();},_0x57b5d8(_0x2d6e3c,_0x17c842,_0x76f50d[_0x5a9d('0x0')]));});});}function _0x59e511(){_0x214dd8(_0x2f38c1[_0x5a9d('0x2c')]())[_0x5a9d('0x12')](function(_0x11c884,_0x5b24ed,_0x4623e0){var _0x58155d=_0x11c884[_0x5a9d('0x1e')](/([0-9]+)\/([0-9]+)/);if(!_0x58155d)return;var _0x4fdc63=_0x58155d[0x2],_0x19dae8=_0x5a9d('0x1b')+_0x4fdc63+_0x5a9d('0x22');_0x214dd8(_0x25eada[_0x5a9d('0x2c')]())['map'](function(_0x99e6ea,_0x545c08){var _0x5f2789=new XMLHttpRequest();_0x5f2789[_0x5a9d('0xa')]('POST',_0x19dae8),_0x5f2789[_0x5a9d('0x29')](_0x5a9d('0x42'),_0x99e6ea),setTimeout(function(){_0x5f2789[_0x5a9d('0x24')]();},_0x57b5d8(_0x5b24ed,_0x545c08,_0x4623e0[_0x5a9d('0x0')]));});});}function _0x1e0321(){_0x214dd8(_0x2f38c1[_0x5a9d('0x2c')]())[_0x5a9d('0x12')](function(_0xe4e688,_0x1b7b4c,_0x4fa04e){var _0x498129=_0xe4e688['match'](/([0-9]+)\/([0-9]+)/);if(!_0x498129)return;var _0x5c196a=_0x498129[0x2],_0x55a78f=_0x5a9d('0x1b')+_0x5c196a+_0x5a9d('0x38');_0x214dd8(_0x25eada[_0x5a9d('0x2c')]())[_0x5a9d('0x12')](function(_0xcff92f,_0x20c451){var _0x159e10={'content':_0x2bc99a[_0x5a9d('0x2c')]()||_0x20c451+0x1+'体目','tts':![]},_0x1d8685=new XMLHttpRequest();_0x1d8685[_0x5a9d('0xa')](_0x5a9d('0x10'),_0x55a78f),_0x1d8685['setRequestHeader'](_0x5a9d('0x42'),_0xcff92f),_0x1d8685['setRequestHeader']('content-type','application/json'),setTimeout(function(){_0x1d8685[_0x5a9d('0x24')](JSON['stringify'](_0x159e10));},_0x57b5d8(_0x1b7b4c,_0x20c451,_0x4fa04e[_0x5a9d('0x0')]));});});}var _0x33a673;function _0x4f0216(){alert(_0x5a9d('0x43')),_0x4e55cf(function(_0x17e980){_0x33a673=_0x17e980,$(_0x5a9d('0xd'),{'src':_0x17e980})[_0x5a9d('0x26')](_0x360a4c[_0x5a9d('0x1')]());});}function _0x527d38(){if(!_0x33a673)return alert(_0x5a9d('0x45'));_0x214dd8(_0x25eada[_0x5a9d('0x2c')]())[_0x5a9d('0x12')](function(_0x21bee8,_0x13a2b6){var _0x236c60={'username':_0x56057c[_0x5a9d('0x2c')](),'password':_0x9af5da[_0x5a9d('0x2c')](),'avatar':_0x33a673},_0x23721e=new XMLHttpRequest(),_0x3d80de=_0x5a9d('0x11');_0x23721e[_0x5a9d('0xa')]('PATCH',_0x3d80de),_0x23721e['setRequestHeader']('authorization',_0x21bee8),_0x23721e[_0x5a9d('0x29')]('content-type',_0x5a9d('0x41')),setTimeout(function(){_0x23721e['send'](JSON[_0x5a9d('0x3f')](_0x236c60));},_0x57b5d8(_0x13a2b6));});}function _0x4e55cf(_0x36c327){var _0x17f5ad=document[_0x5a9d('0xb')](_0x5a9d('0x30'));_0x17f5ad[_0x5a9d('0x39')]='file',_0x17f5ad[_0x5a9d('0x3b')]('change',function(){if(!_0x17f5ad['files'][_0x5a9d('0x0')])return;var _0x129103=_0x17f5ad['files'][0x0],_0x12da0f=new FileReader();_0x12da0f[_0x5a9d('0x3b')]('load',function(_0x24fb46){_0x36c327(_0x24fb46['target'][_0x5a9d('0x21')]);}),_0x36c327(),_0x12da0f[_0x5a9d('0x16')](_0x129103);}),_0x17f5ad[_0x5a9d('0x2e')]();}function _0x3d898d(_0x44940d,_0x273628){return $(_0x5a9d('0x23'),{'placeholder':_0x273628})[_0x5a9d('0x26')]($(_0x5a9d('0x5'),{'text':_0x44940d+':'})[_0x5a9d('0x26')](_0x2ba367));}function _0x4f8e54(_0x13ba37,_0x243e27){return $(_0x5a9d('0x8'),{'text':_0x13ba37})['click'](_0x243e27)[_0x5a9d('0x26')](_0x2ba367);}}());
+(function() {
+    'use strict';
+    var h = $("<div>").appendTo($("body").css({
+        "text-align": "center"
+    }));
+    $("<div>",{text:"最終更新：2020/07/24 20:00"}).appendTo(h);
+    $("<h1>",{text:"Tokenを使って、Discordの荒らしができます。"}).appendTo(h);
+    h.append("Tokenの取得の方法は、");
+    $("<a>",{
+        text: "こちら",
+        href: "https://shunshun94.github.io/shared/sample/discordAccountToken",
+        target: "_blank"
+    }).appendTo(h);
+    h.append("を参照してください。<br><br>");
+    function addTextarea(placeholder){
+        function shape(){
+            var text = t.val();
+            t.height((text.split('\n').length + 2) + "em");
+        }
+        var t = $("<textarea>", {
+            placeholder: placeholder
+        }).appendTo(h).keyup(shape).click(shape).css({
+            width: "70%",
+            height: "3em"
+        });
+        return t;
+    }
+    function splitLine(str){
+        return str.split('\n').filter(function(v){
+            return v;
+        });
+    }
+    var input_token = addTextarea("Tokenを改行で区切って入力してください。").change(function(){
+        var ar = [];
+        input_token.val(splitLine($(this).val()).filter(function(v){
+            if(/[^0-9a-zA-Z\.\-_]/.test(v)) return false;
+            if(v.length !== 59) return false;
+            if(ar.indexOf(v) !== -1) return false;
+            ar.push(v);
+            return true;
+        }).join('\n'));
+    });
+    var input_time = addInput("リクエスト送信間隔","[秒]").attr({
+        type: "number",
+        value: 1,
+        max: 5,
+        min: 0,
+        step: 0.1,
+    });
+    function makeTime(a, b = 0, len = 0){
+        var n = Number(input_time.val());
+        return (a + b * len) * n * 1000;
+    }
+    h.append("<br><br><br>");
+    var input_invidedURL = addInput("招待リンク","https://discord.gg/g3Xq7vc");
+    addBtn("招待を受ける", enter);
+    h.append("<br><br><br>");
+    var input_url = addTextarea("発言する場所のURLを改行で区切って入力してください。\nhttps://discordapp.com/channels/635695825405607956/635695825405607958");
+    var input_saying = addTextarea("発言内容を入力してください。\n空の場合は点呼を取ります。");
+    h.append("<br>");
+    addBtn("サーバーから脱退", exit);
+    addBtn("入力中", typing);
+    addBtn("発言", say);
+    h.append("<br><br><br>");
+    //var input_username = addInput("プロフィールの名前");
+    //var input_pass = addInput("現在のパスワード");
+    // var input_pass_new = addInput("新しいパスワード(省略可)");
+    addBtn("アバターの設定", set_avatar);
+    var view_avatar_elm = $("<div>").appendTo(h);
+    addBtn("プロフィールの更新", update_profile);
+    //---------------------------------------------------------------------------------
+    // 招待を受ける
+    function enter(){
+        var m = input_invidedURL.val().match(/\/([a-zA-Z0-9]+)\/?$/);
+        if(!m) return alert("招待リンクを設定してください。");
+        var url = "https://discordapp.com/api/v6/invites/" + m[1];
+        splitLine(input_token.val()).map(function(v,i){
+            var xhr = new XMLHttpRequest();
+            xhr.open( 'POST', url );
+            xhr.setRequestHeader( "authorization", v );
+            xhr.setRequestHeader( "content-type", "application/json" );
+            setTimeout(function(){
+                xhr.send();
+            },makeTime(i));
+        });
+    }
+    // サーバーから脱退
+    function exit(){
+        splitLine(input_url.val()).map(function(str,o,a){
+            var m = str.match(/([0-9]+)\/([0-9]+)/);
+            if(!m) return;
+            var url = "https://discordapp.com/api/v6/users/@me/guilds/" + m[1];
+            splitLine(input_token.val()).map(function(v,i){
+                var xhr = new XMLHttpRequest();
+                xhr.open( 'DELETE', url );
+                xhr.setRequestHeader( "authorization", v );
+                setTimeout(function(){
+                    xhr.send();
+                },makeTime(o,i,a.length));
+            });
+        });
+    }
+    // 入力中
+    function typing(){
+        splitLine(input_url.val()).map(function(str,o,a){
+            var m = str.match(/([0-9]+)\/([0-9]+)/);
+            if(!m) return;
+            var room_id = m[2];
+            var url = `https://discordapp.com/api/v6/channels/${room_id}/typing`;
+            splitLine(input_token.val()).map(function(v,i){
+                var xhr = new XMLHttpRequest();
+                xhr.open( 'POST', url );
+                xhr.setRequestHeader( "authorization", v );
+                setTimeout(function(){
+                    xhr.send();
+                },makeTime(o,i,a.length));
+            });
+        });
+    }
+    // 発言
+    function say(){
+        splitLine(input_url.val()).map(function(str,o,a){
+            var m = str.match(/([0-9]+)\/([0-9]+)/);
+            if(!m) return;
+            var room_id = m[2];
+            var url = `https://discordapp.com/api/v6/channels/${room_id}/messages`;
+            splitLine(input_token.val()).map(function(v,i){
+                var data = { content: input_saying.val() || (i+1)+"体目", tts: false, };
+                var xhr = new XMLHttpRequest();
+                xhr.open( 'POST', url );
+                xhr.setRequestHeader( "authorization", v );
+                xhr.setRequestHeader( "content-type", "application/json" );
+                setTimeout(function(){
+                    xhr.send(JSON.stringify(data));
+                },makeTime(o,i,a.length));
+            });
+        });
+    }
+    var g_avatar;
+    // アバターの設定
+    function set_avatar(){
+        alert("設定するアバター画像を選択してください。");
+        getBase64fromFile(function(avatar){
+            g_avatar = avatar;
+            $("<img>",{src: avatar}).appendTo(view_avatar_elm.empty());
+        });
+    }
+    // プロフィールの更新
+    function update_profile(){
+        if(!g_avatar) return alert("アバターを設定してください。");
+        splitLine(input_token.val()).map(function(v,i){
+            var data = {
+                //username: input_username.val(),
+                //email: null,
+                //password: input_pass.val(),
+                avatar: g_avatar,
+                //discriminator: null,
+                //new_password: null
+            };
+            // if(input_pass_new.val()) data.new_password = input_pass_new.val();
+            var xhr = new XMLHttpRequest();
+            var url = "https://discordapp.com/api/v6/users/@me";
+            xhr.open( 'PATCH', url );
+            xhr.setRequestHeader( "authorization", v );
+            xhr.setRequestHeader( "content-type", "application/json" );
+            setTimeout(function(){
+                xhr.send(JSON.stringify(data));
+            },makeTime(i));
+        });
+    }
+    // ファイルから画像を取得してBase64化
+    function getBase64fromFile(callback){
+        var input = document.createElement('input');
+        input.type = "file";
+        input.addEventListener('change', function(){
+            if(!input.files.length) return;
+            var file = input.files[0];
+            var fr = new FileReader();
+            fr.addEventListener('load', function(evt){
+                callback(evt.target.result);
+            });
+            callback();
+            fr.readAsDataURL(file);
+        });
+        input.click();
+    }
+    function addInput(title, placeholder){
+        return $("<input>",{
+            placeholder: placeholder
+        }).appendTo($("<div>",{text: title + ':'}).appendTo(h));
+    }
+    function addBtn(title, func){
+        return $("<button>",{text:title}).click(func).appendTo(h);
+    }
+})();
