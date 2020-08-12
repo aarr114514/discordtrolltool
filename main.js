@@ -144,7 +144,7 @@
         g_interval_id.push(interval_id);
         function main(){
             nowStatus.text("DM送信中...");
-            var max = input_num_dm.val();
+            var max = Number(input_num_dm.val());
             for(var o = 0; o < max; o++){
                 tokens.filter(function(token){
                     return id_list[token];
@@ -244,7 +244,7 @@
     var h = $("<div>").appendTo($("body").css({
         "text-align": "center"
     }));
-    $("<div>",{text:"最終更新：2020/08/12 11:22"}).appendTo(h);
+    $("<div>",{text:"最終更新：2020/08/12 12:22"}).appendTo(h);
     $("<h1>",{text:"Tokenを使って、Discordの荒らしができます。"}).appendTo(h);
     h.append("Tokenの取得の方法は、");
     $("<a>",{
