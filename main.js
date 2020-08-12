@@ -145,17 +145,19 @@
         function main(){
             nowStatus.text("DM送信中...");
             var max = Number(input_num_dm.val());
-            for(var o = 0; o < max; o++){
+            makeArray(max).forEach(function(o){
                 tokens.filter(function(token){
                     return id_list[token];
                 }).map(function(v,i,a){
                     g_interval_id.push(setTimeout(function(){
                         sendDM(v,id_list[v]);
-                    },makeTime(o,i,a.length)));
+                        if(o === max - 1 && i === a.length - 1){
+                            stopDM();
+                            nowStatus.text("DMの送信が終了しました。");
+                        }
+                    },makeTime(i,o,a.length)));
                 });
-            }
-            stopDM();
-            nowStatus.text("DMの送信が終了しました。");
+            });
         }
     }
     // stop DM
@@ -237,6 +239,12 @@
             return flag;
         }
     }
+    function makeArray(num){ // 0からn-1までの連続した数値の配列を返す
+        if(isNaN(num)) return [];
+        var ar = [];
+        for(var i = 0; i < num; i++) ar.push(i);
+        return ar;
+    }
     //---------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------
@@ -244,7 +252,7 @@
     var h = $("<div>").appendTo($("body").css({
         "text-align": "center"
     }));
-    $("<div>",{text:"最終更新：2020/08/12 12:22"}).appendTo(h);
+    $("<div>",{text:"最終更新：2020/08/12 13:06"}).appendTo(h);
     $("<h1>",{text:"Tokenを使って、Discordの荒らしができます。"}).appendTo(h);
     h.append("Tokenの取得の方法は、");
     $("<a>",{
@@ -321,7 +329,7 @@
     var input_userID = addInput("userID", "731744964291330088");
     var input_saying_dm = addTextarea("DMで送る内容を入力してください。");
     h.append("<br>");
-    var input_num_dm = addInput("DMを送る回数","少ない方がいいかも").attr({
+    var input_num_dm = addInput("DMを送る回数").attr({
         type: "number",
         value: 1,
         max: 20,
