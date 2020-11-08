@@ -261,11 +261,6 @@
         target: "_blank"
     }).appendTo(h);
     h.append("を参照してください。<br><br>");
-        h.append("サポートサーバーは");
-    $("<a>",{
-        text: "こちら",
-        href: "https://discord.io/AARR",
-        target: "_blank"
     function addTextarea(placeholder){
         function shape(){
             var text = t.val();
